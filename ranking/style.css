@@ -1,0 +1,28 @@
+body {
+	background-color: rgb(127, 71, 147)
+  }
+  .rating {
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+  }
+  .titulo h1{
+	display:FLEX;
+	justify-content:center;
+	align-items:center;
+	height: 100vh;
+  }
+
+  .app{
+	border: 2px black solid;
+  }
+  .item {
+	width: 100px;
+	height: auto;
+	padding: 15px;
+
+  }
+  
+  .item-full {
+	
+  }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENÚ DE PRÁCTICAS</title>
+    <link rel="stylesheet" href="stylePrincipal.css">
+</head>
+<body>
+   
+    <h1>MENÚ DE PRÁCTICAS</h1>
+    <div class="menu">
+        <button onclick="location.href='primerPractica/primerPractica.html'">EJEMPLO: ELEMENTOS HTML</button>
+        <button onclick="location.href='actividad1/practicaUno.html'">PRÁCTICA 1: HORARIO</button>
+        <button onclick="location.href='practicaCss/practicaCss.html'">PRÁCTICA 2: USO DE CSS</button>
+        <button onclick="location.href='Practica2CSS_TortugasNinja/practica2Css_Tortugas.html'">PRÁCTICA 3: CSS TORTUGAS NINJA</button>
+        <button onclick="location.href='Practica3CSS/practica3Css.html'">PRÁCTICA 4: RECREAR EJEMPLO CON CSS</button>
+        <button onclick="location.href='Practica4CSS_PaginaSaobreMi/practica4Css_PaginaYo.html'">PRÁCTICA 5: PÁGINA SOBRE MÍ CON CSS</button>
+        <button onclick="location.href='miprimerjs/miprimerjs.html'">EJEMPLO: MI PRIMER JS</button>
+        <button onclick="location.href='miprimerjs/calculadora.html'">EJEMPLO: CALCULADORA (SUMA)</button>
+        <button onclick="location.href='miprimerjs/practicaCalculadora.html'">PRÁCTICA 6: CALCULADORA (OPERACIONES BÁSICAS)</button>
+        <button onclick="location.href='slider/slider.html'"> PRÁCTICA 7: SLIDER </button>
+        <button onclick="location.href='cuadroColores/cuadroColores.html'"> PRÁCTICA 8: CUADRO DE COLORES </button>
+        <button onclick="location.href='comentarios/comentarios.html'">PRÁCTICA 9: COMENTARIOS</button>
+        <button onclick="location.href='ranking/rating.html'"> PRÁCTICA 10: RATING </button>
+    </div>
+    
+    <footer class="footer">
+        © Derechos reservados AlfredRJ
+    </footer>
+
+    
+
+    <script>
+        window.onload = function() {
+        history.pushState(null, document.title, location.href);
+        };
+
+        window.onpopstate = function() {
+            history.pushState(null, document.title, location.href);
+        };
+    </script>
+</body>
+</html>

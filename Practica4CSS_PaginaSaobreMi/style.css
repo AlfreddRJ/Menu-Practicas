@@ -1,0 +1,209 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #bdbdbd;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    height: 70px;
+    margin-left: 20px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: grey;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a.active {
+    color: #C76000;
+}
+nav ul li a.active:hover{
+    color: #8b8b8b;
+}
+main {
+    padding-top: 60px;
+}
+.section {
+    padding: 50px;
+    min-height: 60vh;
+}
+
+/*Contenedo de información*/
+.info-container {
+    display: flex;
+    align-items: center;
+    /* background: #C76000; */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 20px;
+    transition: transform 1s ease-in-out;
+}
+.info-container img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin-right: 40px;
+    transition: transform 1s ease-in-out;
+}
+
+.info-container:hover {
+    transform: translateY(30px);
+}
+.info-text {
+    color: black;
+    text-align: justify;
+    font-weight: medium;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+
+}
+
+/*Contenedo de hobbies*/
+.info-container-hobbies {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 20px;
+    justify-content: center;
+}
+
+.imagen img{
+    width: 300px;
+    height: 300px;
+    margin: 40px;
+    border-radius: 20%;
+    transition: transform 1s ease-in-out;
+}
+
+.cajaTexto{
+    background-color: #252525;
+    font-weight: bold;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    text-align: center;
+    color: aliceblue;
+    font-size: medium
+}
+
+.imagen:hover .cajaTexto{
+    display: block;
+    transform: translateY(-505px);
+}
+
+.imagen:hover img{
+    height: 350px;
+    width: 350px;
+    border-radius: 20%;
+    transform: translateY(-70px);
+}
+
+/*El título de todas las secciones*/
+.title-sections{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+
+/*Para las imágenes de los conciertos*/
+.imagen-conciertos img{
+    width: 450px;
+    height: 300px;
+    margin: 40px;
+    border-radius: 10%;
+    transition: transform 1s ease-in-out;
+}
+
+.imagen-conciertos:hover .cajaTexto{
+    display: block;
+    transform: translateY(-480px);
+}
+
+.imagen-conciertos:hover img{
+    height: 310px;
+    width: 450px;
+    border-radius: 10%;
+    transform: translateY(-70px);
+}
+
+/*Para las imágenes de mi relación*/
+.imagen-relacion img{
+    width: 310px;
+    height: 420px;
+    margin: 40px;
+    border-radius: 10px;
+    transition: transform 1s ease-in-out;
+}
+
+
+.imagen-relacion:hover img{
+    width: 310px;
+    height: 420px;
+    border-radius: 10px;
+    transform: translateY(-90px);
+}
+
+/*iNFO CONTACTO*/
+#cajitaSocial{
+    text-align: center;
+    padding: 20px;
+    
+}
+
+#img1{
+    text-align: center;
+    padding: 20px;
+    transition: transform 1s ease-in-out;
+    
+}
+
+#img1:hover{
+    text-align: center;
+    padding: 20px;
+    transform: translateY(-50px);
+    
+}
+
+#img2{
+    text-align: center;
+    padding: 20px;
+    transition: transform 1s ease-in-out;
+    
+}
+
+#img2:hover{
+    text-align: center;
+    padding: 20px;
+    transform: translateY(-50px);
+    
+}

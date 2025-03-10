@@ -1,0 +1,37 @@
+.slider-container {
+  border: 5px solid #138D75;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 60vh;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.BOTONES {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+.botonsig, .botonanterior {
+  background: #138D75;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 0.25rem;
+  border-radius: 5px;
+}
+.botonsig:disabled, .botonanterior:disabled {
+  background: grey;
+  cursor: not-allowed;
+}
