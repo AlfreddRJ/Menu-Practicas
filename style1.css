@@ -1,0 +1,75 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    color: #10496f;
+    font-size: medium;
+    /* border:  2px solid black; */
+    /* margin: 10px; */
+}
+
+body{
+    margin: 20px 80px 0 80px;
+    background-color: antiquewhite;
+}
+
+h1{
+    text-align: center;
+}
+
+#titulo1{
+    font-size: 30px;
+    letter-spacing: 5px;
+    color: crimson;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.titulos{
+    font-size: 25px;
+    color: black;
+
+}
+
+#cajitaTexto{
+    padding: 10px 50px 0 50px;
+}
+
+p{
+    text-align: justify;
+}
+
+#cajitaBoton{
+    text-align: center;
+    
+}
+
+#btn1{
+    font-size: 30px;
+    background-color: blue;
+    color: aliceblue;
+}
+#btn2{
+    font-size: 30px;
+    background-color: red;
+    color: aliceblue;
+}
+
+#cajitaImagen{
+    text-align: center;
+    
+}
+#cajitaSocial{
+    text-align: center;
+    padding: 10px;
+    
+}
+
+#img1{
+    text-align: center;
+    padding: 10px;
+    
+}
+
+#img2{
+    text-align: center;
+    padding: 10px;
+    
+}

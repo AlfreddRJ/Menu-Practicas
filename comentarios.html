@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Contenedor del input principal para escribir comentarios -->
+    <div class="input" onkeypress="crearComentarios(event)">
+        <input type="text"  placeholder="Ingresa tu comentario" >
+    </div>
+
+    <!-- Contenedor donde se mostrarán los comentarios -->
+    <div class="contenedor"></div>
+
+    <footer class="footer">
+        © Derechos reservados AlfredRJ
+    </footer>
+
+    <script>
+        function crearComentarios(event, parentElement = null) {
+            // Verifica si se presionó Enter y si el input no está vacío
+            if (event.key === "Enter" && event.target.value.trim() !== "") {
+                let comentarioTexto = event.target.value.trim();
+                event.target.value = ""; // Limpiar input después de enviar
+
+                // Crear un div para el comentario
+                let comentarioDiv = document.createElement("div");
+                comentarioDiv.classList.add("caja");
+                
+                // Si es una respuesta, agregar margen izquierdo para indentación
+                if (parentElement) {
+                    comentarioDiv.style.marginLeft = (parseInt(parentElement.style.marginLeft || 0) + 20) + "px";
+                }
+
+                // Crear el párrafo con el texto del comentario
+                let textoComentario = document.createElement("p");
+                textoComentario.classList.add("texto-comentario");
+                textoComentario.innerText = comentarioTexto;
+
+                // Contenedor de los botones (Responder, Like, Eliminar)
+                let botonesDiv = document.createElement("div");
+                botonesDiv.classList.add("botones");
+
+                // Botón de Responder
+                let responderBtn = document.createElement("button");
+                let responderImg = document.createElement("img");
+                responderImg.src = "img/reply.png"; 
+                responderImg.alt = "Responder";
+                responderBtn.appendChild(responderImg);
+                responderBtn.onclick = function () { mostrarInputRespuesta(comentarioDiv); };
+
+                // Botón de Like
+                let likeBtn = document.createElement("button");
+                let likeImg = document.createElement("img");
+                likeImg.src = "img/like.png"; 
+                likeImg.alt = "Like";
+                likeBtn.appendChild(likeImg);
+                let likesContador = document.createElement("span");
+                likesContador.classList.add("likes");
+                likesContador.innerText = "(0)";
+                let likes = 0;
+                likeBtn.onclick = function () {
+                    likes++;
+                    likesContador.innerText = `(${likes})`;
+                };
+
+                // Botón de Eliminar comentario
+                let eliminarBtn = document.createElement("button");
+                let eliminarImg = document.createElement("img");
+                eliminarImg.src = "img/delete.png"; 
+                eliminarImg.alt = "Eliminar";
+                eliminarBtn.appendChild(eliminarImg);
+                eliminarBtn.onclick = function () {
+                    comentarioDiv.remove();
+                };
+
+                // Agregar botones al contenedor de botones
+                botonesDiv.appendChild(responderBtn);
+                botonesDiv.appendChild(likeBtn);
+                botonesDiv.appendChild(likesContador);
+                botonesDiv.appendChild(eliminarBtn);
+
+                // Agregar elementos al comentario
+                comentarioDiv.appendChild(textoComentario);
+                comentarioDiv.appendChild(botonesDiv);
+
+                // Si es una respuesta, agregarla dentro del comentario padre
+                if (parentElement) {
+                    let respuestasContainer = parentElement.querySelector(".respuestas");
+                    if (!respuestasContainer) {
+                        respuestasContainer = document.createElement("div");
+                        respuestasContainer.classList.add("respuestas");
+                        parentElement.appendChild(respuestasContainer);
+                    }
+                    respuestasContainer.appendChild(comentarioDiv);
+                    
+                    // Eliminar el input de respuesta después de enviar la respuesta
+                    let inputRespuesta = parentElement.querySelector(".respuesta-input");
+                    if (inputRespuesta) inputRespuesta.remove();
+                } else {
+                    document.querySelector(".contenedor").appendChild(comentarioDiv);
+                }
+            }
+        }
+
+        function mostrarInputRespuesta(parentElement) {
+            // Verificar si ya existe un input de respuesta para evitar duplicados
+            let inputRespuestaExistente = parentElement.querySelector(".respuesta-input");
+            if (inputRespuestaExistente) return;
+
+            // Crear un input para escribir la respuesta
+            let inputRespuesta = document.createElement("input");
+            inputRespuesta.type = "text";
+            inputRespuesta.classList.add("respuesta-input");
+            inputRespuesta.placeholder = "Escribe una respuesta...";
+            inputRespuesta.onkeypress = function (event) { crearComentarios(event, parentElement); };
+
+            parentElement.appendChild(inputRespuesta);
+            inputRespuesta.focus(); // Enfocar el input automáticamente
+        }
+    </script>
+
+</body>
+</html>
