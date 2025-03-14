@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Registro de Películas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Películas</h1>
+        
+        <div class="formulario">
+            <input type="text" id="movieTitle" placeholder="Título de la película" required>
+            <input type="text" id="movieGenre" placeholder="Género" required>
+            <input type="number" id="movieYear" placeholder="Año" required>
+            <input type="number" id="movieRating" placeholder="Calificación (1-10)" min="1" max="10" required>
+            <button id="boton">Agregar Película</button>
+        </div>
+
+        <div id="movieList">
+            <a href="buscar.html">Ir al buscador</a>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
