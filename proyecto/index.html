@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Juego de Eliminar Imágenes</title>
+</head>
+<body>
+    <div class="start-screen">
+        <h1>Bienvenido al Juego</h1>
+        <button class="start-button" onclick="startGame()">Empezar</button>
+    </div>
+    
+    <div class="game-over-screen" style="display: none;">
+        <h1>JUEGO TERMINADO</h1>
+        <p>Tiempo jugado: <span id="tiempoFinal"></span> segundos</p>
+        <p>Puntaje: <span id="puntajeFinal"></span></p>
+        <button class="btnReiniciar" onclick="restartGame()">Reiniciar</button>
+    </div>
+    
+    <div class="barraInfo">
+        <div class="tiempo">Tiempo: <span id="tiempo">0</span> s</div>
+        <div class="puntos">Puntos: <span id="puntos">0</span></div>
+    </div>
+
+
+    <script src="funcionamiento.js"></script>
+</body>
+</html>
